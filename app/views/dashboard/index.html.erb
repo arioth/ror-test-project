@@ -1,0 +1,24 @@
+<%= form_tag '/update_profile', method: :put, class: 'form-inline', multipart: true do %>
+
+  <div class="row">
+    <div class="col-xs-6 col-md-3 col-md-offset-2">
+      <%= image_tag current_user.profile_picture.try(:url) || image_path('default-profile.png') %>
+      <%= file_field_tag :profile_picture %>
+    </div>
+    <div class="col-md-5 form-group">
+      <h4>
+        First Name:
+        <%= text_field_tag :first_name, current_user.first_name, class: 'form-control' %>
+      </h4>
+      <h4>
+        Last Name:
+        <%= text_field_tag :last_name, current_user.last_name, class: 'form-control' %>
+      </h4>
+      <h4>Email: <small><%= current_user.email %></small></h4>
+    </div>
+  </div>
+  <div class="row text-center">
+    <%= submit_tag 'Update Profile', class: 'btn btn-primary' %>
+  </div>
+
+<% end %>

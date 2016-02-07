@@ -35,9 +35,10 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'carrierwave'
-gem 'fog-aws'
+gem 'fog'
 gem 'figaro'
 gem 'bootstrap-sass'
+gem "mini_magick"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
