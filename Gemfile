@@ -42,6 +42,8 @@ gem "mini_magick"
 gem 'activeadmin', github: 'activeadmin'
 gem 'puma'
 gem 'rails_12factor', group: :production
+gem 'faker'
+gem 'jquery-ui-sass-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

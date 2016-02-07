@@ -13,4 +13,15 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.ui.autocomplete
 //= require_tree .
+
+$(function() {
+  $('#search').autocomplete({
+    source: "/users/search",
+      minLength: 2,
+      select: function( event, ui ) {
+        location = '/users/' + ui.item.id
+      }
+  })
+});
