@@ -7,8 +7,30 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+  <% if notice %>
+    <div class="alert alert-success">
+      <div class="container text-center">
+        <%= notice %>
+      </div>
+    </div>
+  <% end %>
+  <% if alert %>
+    <div class="alert alert-danger">
+      <div class="container text-center">
+        <%= alert %>
+      </div>
+    </div>
+  <% end %>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <%= link_to "Test", root_path, class: "navbar-brand" %>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <%= yield %>
+  </div>
 
 </body>
 </html>
