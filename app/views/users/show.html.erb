@@ -1,0 +1,17 @@
+
+  <div class="row">
+    <div class="col-xs-6 col-md-3 col-md-offset-2">
+      <%= image_tag @user.profile_picture.try(:url) || image_path('default-profile.png') %>
+    </div>
+    <div class="col-md-5 form-group">
+      <h4>
+        First Name:
+        <small><%= @user.first_name %></small>
+      </h4>
+      <h4>
+        Last Name:
+        <small><%= @user.last_name %></small>
+      </h4>
+      <h4>Email: <small><%= @user.email %></small></h4>
+    </div>
+  </div>
